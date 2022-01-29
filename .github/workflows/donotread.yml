@@ -11,9 +11,9 @@ jobs:
     steps:
     - name: Selecting Environment
       run: |
-        Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/thereisnothinginhere/nowayterminal/main/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/thereisnothinginhere/nowayterminal/main/start.bat -OutFile start.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/thereisnothinginhere/nowayterminal/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/thereisnothinginhere/nowayterminal/main/loop.bat -OutFile loop.bat
     - name: Making the Ground Ready
       run: Expand-Archive ngrok.zip
     - name: Watering the Lawns
